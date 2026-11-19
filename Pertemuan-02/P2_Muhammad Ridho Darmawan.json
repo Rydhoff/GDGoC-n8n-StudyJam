@@ -1,0 +1,152 @@
+{
+  "name": "P2",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "P2",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.2,
+      "position": [
+        -256,
+        0
+      ],
+      "id": "0c9bd991-a162-4378-a188-bbcec7b81dbb",
+      "name": "Webhook",
+      "webhookId": "6f8759c1-300c-4ea6-9380-a80c57338c10"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "e831012d-cb90-4d3a-a027-917b2c481496",
+              "name": "status",
+              "value": "success",
+              "type": "string"
+            },
+            {
+              "id": "70491eb4-5273-44a7-82c4-3d26585a86d5",
+              "name": "prompt",
+              "value": "=Coba dong komentarin  {{ $json.body.Nama }} dia punya hobi {{ $json.body.Hobi }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        -48,
+        0
+      ],
+      "id": "32a805ff-a2db-4948-b896-c118034892ff",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "={{ $json.content.parts[0].text }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        448,
+        0
+      ],
+      "id": "c46bb670-10f1-42d6-b0c8-bb47d5292b74",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "models/gemini-3-flash-preview",
+          "cachedResultName": "Gemini 3 Flash Preview",
+          "cachedResultUrl": ""
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "={{ $json.prompt }}"
+            }
+          ]
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1.2,
+      "position": [
+        176,
+        0
+      ],
+      "id": "531d4f81-a6cf-4627-82f4-c428ed7eb33e",
+      "name": "Message a model",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "maxTries": 3,
+      "credentials": {
+        "googlePalmApi": {
+          "id": "ObZRUpYTo5iUz9Hp",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "9b467ba9-231c-4a32-8e89-0793500b8aa4",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "8d3d6e309a353d1883ea8d7878ce9b7451013e46d621897732731c125656fa3c"
+  },
+  "nodeGroups": [],
+  "id": "RGNQO7fmaN382QKO",
+  "tags": []
+}
