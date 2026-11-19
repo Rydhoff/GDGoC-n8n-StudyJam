@@ -13,21 +13,21 @@
 
 | Pertemuan | Topik Tugas | Tautan File Workflow (.json) | Bukti Eksekusi (Screenshot) | Status |
 | :---: | :--- | :---: | :---: | :---: |
-| **P1** | Pengenalan n8n & Workflow Automation Dasar | [P1_Muhammad Ridho Darmawan.json](hhttps://github.com/Rydhoff/GDGoC-n8n-StudyJam/blob/master/Pertemuan-01/P1_Muhammad%20Ridho%20Darmawan.json) | [P1_Muhammad Ridho Darmawan.png](https://github.com/Rydhoff/GDGoC-n8n-StudyJam/blob/master/Pertemuan-01/P1_Muhammad%20Ridho%20Darmawan.png) | Selesai |
-| **P2** | Webhook Triggers & Data Transformation | [P2_Nama.json](https://github.com/username-anda/GDGoC-n8n-StudyJam/blob/main/Pertemuan-02/P2_Nama.json) | [P2_Nama.png](https://github.com/username-anda/GDGoC-n8n-StudyJam/blob/main/Pertemuan-02/P2_Nama.png) | Selesai |
-| **P3** | Advanced API Integration & Error Handling | [P3_Nama.json](https://github.com/username-anda/GDGoC-n8n-StudyJam/blob/main/Pertemuan-03/P3_Nama.json) | [P3_Nama.png](https://github.com/username-anda/GDGoC-n8n-StudyJam/blob/main/Pertemuan-03/P3_Nama.png) | Selesai |
-| **P4** | AI Agent & LLM Chain Automation di n8n | [P4_Nama.json](https://github.com/username-anda/GDGoC-n8n-StudyJam/blob/main/Pertemuan-04/P4_Nama.json) | [P4_Nama.png](https://github.com/username-anda/GDGoC-n8n-StudyJam/blob/main/Pertemuan-04/P4_Nama.png) | Selesai |
-| **P5** | Capstone Final Project: Smart Autonomous AI | [P5_Nama.json](https://github.com/username-anda/GDGoC-n8n-StudyJam/blob/main/Pertemuan-05/P5_Nama.json) | [P5_Nama.png](https://github.com/username-anda/GDGoC-n8n-StudyJam/blob/main/Pertemuan-05/P5_Nama.png) | Selesai |
+| **P1** | Pengenalan n8n & Workflow Automation Dasar | [P1_Muhammad Ridho Darmawan.json](https://github.com/Rydhoff/GDGoC-n8n-StudyJam/blob/master/Pertemuan-01/P1_Muhammad%20Ridho%20Darmawan.json) | [P1_Muhammad Ridho Darmawan.png](https://github.com/Rydhoff/GDGoC-n8n-StudyJam/blob/master/Pertemuan-01/P1_Muhammad%20Ridho%20Darmawan.png) | Selesai |
+| **P2** | Webhook Triggers & Data Transformation | [P2_Muhammad Ridho Darmawan.json](https://github.com/Rydhoff/GDGoC-n8n-StudyJam/blob/master/Pertemuan-02/P2_Muhammad%20Ridho%20Darmawan.json) | [P2_Muhammad Ridho Darmawan.png](https://github.com/Rydhoff/GDGoC-n8n-StudyJam/blob/master/Pertemuan-02/P2_Muhammad%20Ridho%20Darmawan.png) | Selesai |
+| **P3** | Advanced API Integration & Error Handling | - | Belum |
+| **P4** | AI Agent & LLM Chain Automation di n8n | - | Belum |
+| **P5** | Capstone Final Project: Smart Autonomous AI | - | Belum |
 
 ---
 
 ## 💡 Ringkasan & Solusi Otomasi (Workflow Highlights)
 Tuliskan penjelasan singkat mengenai alur kerja yang telah kamu bangun:
-- **Tujuan Workflow**: (Menjelaskan masalah apa yang diselesaikan oleh otomasi n8n ini)
-- **Node Kunci yang Digunakan**: (Contoh: Webhook, HTTP Request, OpenAI Chat Model, Google Sheets, Gmail, Code Node)
-- **Logika Alur Kerja**: (Ceritakan secara ringkas bagaimana data diterima, diproses, dan dikirimkan ke target output)
+- **Tujuan Workflow**: Membuat alur otomasi dengan menghubungkannya dengan Gemini API
+- **Node Kunci yang Digunakan**: Webhook, Edit Fields, Gemini Message a model, Respond to Webhook
+- **Logika Alur Kerja**: Mengirim data json nama dan hobi melalui hoppscotch ke path n8n yang sudah dibuat dan dirunning, kemudian nilai json akan diambil menjadi prompt oleh edit fields, kemudian prompt dimasukkan ke gemini message a model, dan terakhir dari output gemini dijadikan text respond to webhook
 
 ---
 
 ## 🌟 Refleksi & Kesan Belajar
-(Ceritakan pengalaman, kendala menarik yang berhasil kamu selesaikan, atau pesan kesan selama mengikuti n8n AI & Automation Study Jam bersama GDGoC Widyatama)
+Yang paling berkesan adalah bagaimana dengan webhook bisa ngeprompt dihubungkan dengan ai gemini dan bisa dibuat unlimited limitnya dengan settingan retry on fail
