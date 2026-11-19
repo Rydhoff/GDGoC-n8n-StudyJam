@@ -15,9 +15,9 @@
 | :---: | :--- | :---: | :---: | :---: |
 | **P1** | Pengenalan n8n & Workflow Automation Dasar | [P1_Muhammad Ridho Darmawan.json](https://github.com/Rydhoff/GDGoC-n8n-StudyJam/blob/master/Pertemuan-01/P1_Muhammad%20Ridho%20Darmawan.json) | [P1_Muhammad Ridho Darmawan.png](https://github.com/Rydhoff/GDGoC-n8n-StudyJam/blob/master/Pertemuan-01/P1_Muhammad%20Ridho%20Darmawan.png) | Selesai |
 | **P2** | Webhook Triggers & Data Transformation | [P2_Muhammad Ridho Darmawan.json](https://github.com/Rydhoff/GDGoC-n8n-StudyJam/blob/master/Pertemuan-02/P2_Muhammad%20Ridho%20Darmawan.json) | [P2_Muhammad Ridho Darmawan.png](https://github.com/Rydhoff/GDGoC-n8n-StudyJam/blob/master/Pertemuan-02/P2_Muhammad%20Ridho%20Darmawan.png) | Selesai |
-| **P3** | Advanced API Integration & Error Handling | - | Belum |
-| **P4** | AI Agent & LLM Chain Automation di n8n | - | Belum |
-| **P5** | Capstone Final Project: Smart Autonomous AI | - | Belum |
+| **P3** | Advanced API Integration & Error Handling | - | - | Belum
+| **P4** | AI Agent & LLM Chain Automation di n8n | - | - | Belum
+| **P5** | Capstone Final Project: Smart Autonomous AI | - | - | Belum
 
 ---
 
